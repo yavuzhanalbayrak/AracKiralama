@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebProje</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebProje.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        #giris {
+            color:white;
+            background-color:rgb(180, 34, 34);
+            border-radius:10px;
+            margin-right:10px;
+            box-shadow:0 0 3px 2px rgb(66, 0, 0);
+            font-family: 'Abril Fatface', cursive;
+           
+       
+        }
+
+        #giris:hover {
+           
+           box-shadow:0 0 10px 3px rgb(46, 0, 0);
+            background-color:rgb(134, 0, 0);
+        }
+        #ana {
+            color:azure;
+            padding-left:10px;
+            font-size:50px;
+            font-family: 'Abril Fatface', cursive;
+           
+           
+        }
+        #ana:hover{
+            color:darkgrey;
+            opacity: 0.8 ;
+        }
+        #nav{
+            font-size: 20px;   
+            margin: 0;
+            padding: 0;
+            top: 0;
+            height:70px;
+            
+        }
+        #baslik{
+           
+                text-align:center;
+                color:black;
+                border-bottom:solid 2.3px;
+                border-color: rgb(93, 179, 255);
+                font-family: 'Oswald', sans-serif;
+                border-radius:5px;
+            
+            
+        }
+        #baslik:hover{
+                color: rgb(34, 165, 255);
+                opacity: 1;
+                border-top:solid 2.3px ;
+                border-left: solid 2.3px;
+                border-right:solid 2.3px ;
+                border-bottom: solid 0px;
+                border-color: rgb(93, 179, 255);
+                background-color:rgb(220, 220, 220);
+                border-radius:5px;
+                
+                
+        }
+        #table{
+            background-color:azure;
+            box-shadow:0 0 10px 3px rgb(12, 12, 12);
+             border-radius:5px;
+           
+        }
+        #section{
+            margin: 0;
+            padding: 0;
+            
+        }
+        #button{
+          text-align:center;
+        }
+        #dil{
+            float:left;
+            max-height:35px;
+            
+            text-align:left;
+             box-shadow:0 0 8px 3px rgb(66, 0, 0);
+             border-radius:55px;
+            
+            
+        }
+        #body{
+            background-color: #343a40;
+            box-shadow:0 0 15px 4px black;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            text-align:center;
+            padding-left:30px;
+            padding-right:30px;
+            padding-top:20px;
+            padding-bottom:20px;
+            
+
+            
+        }
+
+        #araclist {
+            padding: 30px;
+        }
+
+        #arac {
+            margin: 0;
+            padding: 0;
+            height: 350px;
+            background-color: whitesmoke;
+            border-color: black;
+            opacity: 0.8;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px black;
+        }
+
+        #aracresmi {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 100%;
+            height: 250px;
+        }
+
+        #arac:hover {
+            border: solid;
+            opacity: 1;
+        }
+
+        #sectionresimaraba {
+            background-image: url("https://westleedervilleautos.com.au/wp-content/uploads/2017/02/audi-rs5-1920x500.jpg");
+            height: 430px;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            padding-top:30px;
+            background-position: center 0;
+            
+
+            
+            
+            
+        } #sectionresimticari {
+            background-image: url("https://cdn.dlron.us/static/dealer-16037/McCandlessFord-LPI-Hero-F250.jpg");
+            height: 430px;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            padding-top:30px;
+            background-position: center 0;
+            
+
+            
+            
+            
+        } #sectionresimmotor {
+            background-image: url("https://s3-ap-southeast-2.amazonaws.com/imotor-cms/images_cms/223403_2023%20ninja%20h2r-bannerimage-sep22-tp.jpg"); height: 430px;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            padding-top:30px;
+            background-position: center 0;
+            
+
+            
+            
+            
+        } #sectionresimkamyon {
+            background-image: url("https://holland-trucks.com/wp-content/uploads/2020/07/slider3.jpg");
+            height: 430px;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            padding-top:30px;
+            background-position: center 0;
+            
+
+            
+            
+            
+        } #sectionresimtekne {
+            background-image: url("https://www.yacht-rent.com/image/cache/data/6/7978/dufour-512-1-1920x500.jpeg");
+            height: 430px;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            padding-top:30px;
+            background-position: center 0;
+            
+
+            
+            
+            
+        }
+        #sectionyazi{
+            color: rgb(208, 222, 255);
+            font-size: 100px;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 12px 5px 6px rgb(11, 23, 51);
+            padding-top:300px;
+            padding-left:16%;
+        }
+
+        #sectionresimindex {
+            background-image: url("https://www.hitrentacar.com/dosya/icerik/371-1-bugun-aracinizi-nereden-alirdiniz.png");
+            height: 430px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-top: 30px;
+            background-position: center 0;
+        }
+        #container{
+            background-image: url("https://www.teahub.io/photos/full/279-2796147_road-wallpaper-1080p.jpg");
+            padding-left:16%;
+            padding-right:16%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        #Mbaslik{
+            font-size:50px;
+            color:white;
+            text-shadow: 4px 5px 6px black;
+            border-bottom:solid;
+            
+        }#metin{
+            padding:10%;
+            font-size:25px;
+            color:whitesmoke;
+        
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav" class="navbar navbar-expand-xxl navbar-toggleable-xxl navbar-light bg-dark " >      @* NAV BAR *@
+            <div class="container-fluid">
+
+                <a id="ana" class="navbar-brand col-2 text-center" asp-area="" asp-controller="Home" asp-action="Index"><bold>Rent a Car</bold> |   
+                    <img src="https://assets.webiconspng.com/uploads/2017/09/Audi-PNG-Image-69202.png" class="" style="width: 120px; margin-bottom:12px" alt="..."></a>       @* ANA SAYFA *@
+                
+
+                <div class="col-5"></div>
+                <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div  class="col-3 navbar-collapse collapse d-xxl-inline-flex justify-content-between ">      @* MENÜ *@
+                    <ul id="table" class="navbar-nav   ">
+                        <li class="nav-item " >
+                            <a id="baslik" class="nav-link  " asp-area="" asp-controller="Araclar" asp-action="Araba">&nbsp Arabalar &nbsp</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="baslik" class="nav-link " asp-area="" asp-controller="Araclar" asp-action="Ticari">&nbsp Ticari<span style="color:azure;">_</span>Araçlar &nbsp</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="baslik" class="nav-link " asp-area="" asp-controller="Araclar" asp-action="Kamyon">&nbsp Kamyonlar &nbsp</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="baslik" class="nav-link " asp-area="" asp-controller="Araclar" asp-action="Motor">&nbsp Motorlar &nbsp</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="baslik" class="nav-link " asp-area="" asp-controller="Araclar" asp-action="Tekne">&nbsp Tekneler &nbsp</a>
+                        </li>
+
+                    </ul>
+                 
+                    <div style="padding-bottom:5px;margin-right:25px;" class=""><a  class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <img id="dil" src="https://www.olkando.com/wp-content/uploads/2016/09/cropped-tc-bayrak-1.png" class=""  alt="..."> </a></div>  @* DİL SEÇENEĞİ *@      
+                    <div class="text-center"><a id="giris" class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Giriş</a></div>@* GİRİŞ SEÇENEĞİ *@
+                           
+                          
+
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+
+    <div id="section">
+        @RenderSection("Resim",false)
+    </div>
+
+    <div id="container" class="">
+        <div class=""> 
+            
+            <div class=" ">
+                @RenderBody()
+            </div>
+            
+
+        </div>
+        
+        
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - WebProje - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
