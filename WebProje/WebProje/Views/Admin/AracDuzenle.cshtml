@@ -1,0 +1,123 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@model WebProje.Entities.Arac
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebProje</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebProje.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+    #container {
+        background-image: url("https://www.teahub.io/photos/full/279-2796147_road-wallpaper-1080p.jpg");
+        padding-left: 16%;
+        padding-right: 16%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    #sectionyazi {
+        color: azure;
+        font-size: 70px;
+        font-family: 'Martian Mono', monospace;
+        text-shadow: 12px 5px 6px rgb(11, 23, 51);
+        padding-top: 317px;
+        padding-left: 17%;
+    }
+
+    #log {
+        border-radius: 20px;
+        box-shadow: 0 0 10px 5px black;
+    }
+</style>
+
+<div id="container" style="">
+
+    <div style="padding-top:300px; padding-bottom:300px">
+        <div id="log" class="row bg-dark">
+            <div class="p-0 text-center" id="sectionyazi">Araç Düzenle</div>
+            <div class="col-4"></div>
+
+            <div class="col-4">
+                <form asp-asp-controller="Admin" asp-action="AracDuzenle">
+
+                    @if (TempData["hata"] is not null)
+                    {
+                        <h5 style="color:red">@TempData["hata"]</h5>
+                    }
+
+                    <div class="form-group">
+                        <label asp-for="marka" class="control-label text-white"></label>
+                        <input asp-for="marka" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="model" class="control-label text-white"></label>
+                        <input asp-for="model" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="renk" class="control-label text-white"></label>
+                        <input asp-for="renk" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="yil" class="control-label text-white"></label>
+                        <input asp-for="yil" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="aracResmi" class="control-label text-white"></label>
+                        <input asp-for="aracResmi" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="tur" class="control-label text-white"></label>
+                        @*<input asp-for="tur" class="form-control" required />*@
+                        <select asp-for="tur" class="form-control" required>
+                            <option value="araba">Araba</option>
+                            <option value="kamyon">Kamyon</option>
+                            <option value="motor">Motor</option>
+                            <option value="tekne">Tekne</option>
+                            <option value="ticari">Ticari Araç</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div row>
+                        <input type="submit" value="Düzenle" class="btn btn-success" />
+                        <a id="" class="btn btn-primary " asp-area="" asp-controller="Admin" asp-action="Index">Geri Dön</a>
+                    </div>
+
+                    <div class="col-4"></div>
+                    <br />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

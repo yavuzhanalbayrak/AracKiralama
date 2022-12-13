@@ -3,7 +3,7 @@
 *@
 @{
 }
-
+@model IEnumerable<WebProje.Entities.Arac>
 @section Resim{
 
         <div id="sectionresimmotor">
@@ -19,22 +19,50 @@
 <div id="body">
     <div class="row">
 
-        @for (int i = 0; i < 15; i++)
+        @foreach (var item in Model)
         {
-                <div id="araclist" class="col-xl-6 col-sm-12 ">
-               <div id="arac">
-                 <div>
-                    <a asp-area="" asp-controller="Home" asp-action="Privacy"><img id="aracresmi" src="https://wallup.net/wp-content/uploads/2019/09/185133-cars-audi-vehicles-audi-a7.jpg" class="" alt="..."></a>
+            <div id="araclist" class="col-xl-6 col-sm-12 ">
+                <div id="arac">
                     <div>
-                        AUDI A6
+                        <a asp-area="" asp-route-id="@item.id" asp-controller="Araclar" asp-action="Detay"><img id="aracresmi" src="@item.aracResmi" class="" alt="..."></a>
+                        <div class="row text-start">
+                            <div class="col-4"></div>
+                            <div class="col-2">@Html.DisplayNameFor(model => model.marka)</div>  :
+                            <div class="col-2">@Html.DisplayFor(model => item.marka)</div>
+
+                        </div>
+                        <div class="row text-start">
+                            <div class="col-4"></div>
+                            <div class="col-2">@Html.DisplayNameFor(model => model.model)</div>  :
+                            <div class="col-2">@Html.DisplayFor(model => item.model)</div>
+
+                        </div>
+                        <div class="row text-start">
+                            <div class="col-4"></div>
+                            <div class="col-2">@Html.DisplayNameFor(model => model.yil)</div>  :
+                            <div class="col-2">@Html.DisplayFor(model => item.yil)</div>
+
+                        </div>
+                        <div class="row text-start">
+                            <div class="col-4"></div>
+                            <div class="col-2">@Html.DisplayNameFor(model => model.renk)</div>  :
+                            <div class="col-2">@Html.DisplayFor(model => item.renk)</div>
+
+                        </div>
+                         <div class="row text-start text-center">
+                                <div class="col-4"></div>
+                                <div class="btn btn-success col-4 ">@Html.ActionLink("Kirala", "Detay", new {  id=item.id })</div>
+                               
+                               
+                                        
+                            </div>
+
                     </div>
-                 </div>
 
 
-                </div> 
+                </div>
             </div>
         }
-
 
 
     </div>

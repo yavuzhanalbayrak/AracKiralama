@@ -1,0 +1,122 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@model IEnumerable<WebProje.Entities.Arac>
+
+    <head>
+        
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebProje</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebProje.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
+    </head>
+   
+    <body>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h4>Araçlar Listesi</h4>
+
+            @if (TempData["msj"] is not null)
+            {
+                <div style="color:palevioletred">@TempData["msj"]</div>
+            }
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.marka)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.model)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.renk)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.yil)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.durum)
+                            </th> 
+                            <th>
+                                @Html.DisplayNameFor(model => model.tur)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.sahibi)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.marka)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.model)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.renk)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.yil)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.durum)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tur)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.sahibi)
+                                </td>
+                                <td class="text-center">
+                                    @Html.ActionLink("Düzenle", "AracDuzenle", new {  id=item.id }) |
+                                    @Html.ActionLink("Sil", "AracSil", new { id = item.id })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+
+
+            <form asp-controller="Giris" asp-action="Cikis">
+                <div row>
+                    <a id="" class="btn btn-success " asp-area="" asp-controller="Admin" asp-action="AracEkle">Araç Ekle</a>
+                    <input type="submit" value="Çıkış" class="btn btn-primary " />
+                    
+                </div>
+            </form>
+
+
+            </div>
+            <div class="col-2"></div>
+
+        </div>
+       
+        
+
+
+    </body>

@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@model IEnumerable<WebProje.Entities.Kiralama>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebProje</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebProje.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h4> Kiralanan Araçlar &nbsp; " @ViewBag.kul"</h4>
+
+            @if (TempData["iade"] is not null)
+            {
+                <div style="color:palevioletred">@TempData["iade"]</div>
+            }
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.aracId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.aracAdi)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.aracModeli)
+                        </th>
+                      
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aracId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aracAdi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.aracModeli)
+                            </td>
+                            
+                          
+                            <td class="text-center">
+                                @Html.ActionLink("İade", "Iade", new { id = item.id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+                <div row>
+
+                    <a id="" class="btn btn-primary " asp-area="" asp-controller="Home" asp-action="Index">Geri Dön</a>
+
+                </div>
+            
+
+        </div>
+        <div class="col-2"></div>
+
+    </div>
+
+
+
+
+</body>

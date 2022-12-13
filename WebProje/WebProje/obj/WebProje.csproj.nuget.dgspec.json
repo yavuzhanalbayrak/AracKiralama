@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\WebProje\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\WebProje\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\WebProje\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\WebProje\\WebProje\\WebProje.csproj",
+        "projectPath": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
         "packagesPath": "C:\\Users\\yavuz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\WebProje\\WebProje\\obj\\",
+        "outputPath": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yavuz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
