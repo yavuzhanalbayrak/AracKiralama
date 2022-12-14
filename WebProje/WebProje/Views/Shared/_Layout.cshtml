@@ -215,7 +215,6 @@
             color:azure;
             font-size: 70px;
             font-family: 'Martian Mono', monospace;
-            text-shadow: 12px 5px 6px rgb(11, 23, 51);
             padding-top:317px;
             padding-left:17%;
         }
@@ -254,6 +253,7 @@
             border-radius: 20px;
             box-shadow: 0 0 10px 5px black;
         }
+        
     </style>
 </head>
 <body>
@@ -266,7 +266,7 @@
                 
 
                 <div class="col-5"></div>
-                <button id="button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <button id="button" style="margin-bottom:15px;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -290,9 +290,22 @@
                         </li>
 
                     </ul>
-                    <div class="row col-3">
+                    <div class="row col-3 text-center">
                         
-                        <div class="text-center"><a id="" class="btn btn-primary " asp-area="" asp-controller="Araclar" asp-action="KiralananAraclar">Kiralanan</a>&nbsp<a id="" class="btn btn-danger" asp-area="" asp-controller="Giris" asp-action="Cikis">Çıkış</a></div>@* ÇIKIŞ SEÇENEĞİ *@
+
+                        <div class="dropdown">
+                            <button style="width:90%; box-shadow: 0px 0px 10px 1px black; margin-top:5px;" class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @ViewBag.name
+                            </button>
+                            <ul style="margin-left:15px ; margin-top:14px; box-shadow: 0px 0px 10px 1px black;" class="dropdown-menu text-center">
+                                <li><a id="" style="width:100%" class="btn  " asp-area="" asp-controller="Araclar" asp-action="KiralananAraclar">Kiralanan</a></li>
+                                <li><a id="" style="width:100%" class="btn  " asp-area="" asp-controller="Araclar" asp-action="KiralananAraclar">dil</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a id="" style="width:100%" class="btn " asp-area="" asp-controller="Giris" asp-action="Cikis">Çıkış</a></li>
+                                
+                            </ul>
+                        </div>
+
                         
                         
 

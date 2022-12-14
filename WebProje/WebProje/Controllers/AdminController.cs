@@ -16,12 +16,45 @@ namespace WebProje.Controllers
         AppDbContext _context = new AppDbContext();
 
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
 
-            var araclar =  _context.araclar;
 
-            return View(araclar);
+            var arac =  _context.araclar.OrderBy(x=>x.tur);
+            if (id == 2)
+            {    //FİLTRELEME İŞLEMİ
+                arac = _context.araclar.Where(x=>x.durum=="listede").OrderBy(x => x.tur);//Listedekiler
+            }
+            else if (id == 3)
+            {
+                arac = _context.araclar.Where(x => x.durum == "kiralandi").OrderBy(x => x.tur);//Kiralananlar
+            }
+            else if (id == 4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "araba" ).OrderBy(x => x.marka);//Arabalar
+            }
+             else if (id == 5)
+            {
+                arac = _context.araclar.Where(x => x.tur == "motor" ).OrderBy(x => x.marka);//Azalan
+            }
+             else if (id == 6)
+            {
+                arac = _context.araclar.Where(x => x.tur == "kamyon" ).OrderBy(x => x.marka);//Azalan
+            }
+             else if (id == 7)
+            {
+                arac = _context.araclar.Where(x => x.tur == "tekne" ).OrderBy(x => x.marka);//Azalan
+            }
+              else if (id == 8)
+            {
+                arac = _context.araclar.Where(x => x.tur == "ticari" ).OrderBy(x => x.marka);//Azalan
+            }
+
+            else arac = _context.araclar.OrderBy(x => x.tur);//HEPSİ
+
+
+
+            return View(arac);
         } 
         public IActionResult AracEkle()
         {

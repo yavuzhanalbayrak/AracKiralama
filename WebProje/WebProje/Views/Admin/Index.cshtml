@@ -34,6 +34,39 @@
             <div class="col-2"></div>
             <div class="col-8">
                 <h4>Araçlar Listesi</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="btn  ">@Html.ActionLink("Hepsi", "Index", new {  id=1 })</div>
+                        </th>
+                        <th>
+                            <div class="btn  ">@Html.ActionLink("Listedekiler", "Index", new {  id=2 })</div>
+                        </th>
+                        <th>
+                            <div class="btn  ">@Html.ActionLink("Kiralananlar", "Index", new {  id=3 })</div>
+                        </th>
+                        <th>
+                            <div class="btn  ">@Html.ActionLink("Arabalar", "Index", new {  id=4 })</div>
+                        </th>
+                      <th>
+                            <div class="btn  ">@Html.ActionLink("Motorlar", "Index", new {  id=5 })</div>
+                        </th>
+                      <th>
+                            <div class="btn  ">@Html.ActionLink("Kamyonlar", "Index", new {  id=6 })</div>
+                        </th>
+                      <th>
+                            <div class="btn  ">@Html.ActionLink("Tekneler", "Index", new {  id=7 })</div>
+                        </th>
+                      <th>
+                            <div class="btn  ">@Html.ActionLink("Ticari Araçlar", "Index", new {  id=8 })</div>
+                        </th>
+                      
+                    </tr>
+                </thead>
+            
+            
+
 
             @if (TempData["msj"] is not null)
             {

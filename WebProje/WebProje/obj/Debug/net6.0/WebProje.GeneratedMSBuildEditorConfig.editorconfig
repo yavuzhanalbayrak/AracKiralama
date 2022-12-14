@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebProje
 build_property.RootNamespace = WebProje
-build_property.ProjectDir = C:\Users\yavuz\source\repos\WebProje\WebProje\
+build_property.ProjectDir = C:\Users\yavuz\OneDrive\Masaüstü\WebProje\WebProje\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\yavuz\source\repos\WebProje\WebProje
+build_property.MSBuildProjectDirectory = C:\Users\yavuz\OneDrive\Masaüstü\WebProje\WebProje
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Admin/AracDuzenle.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Admin/AracDuzenle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXJhY0R1emVubGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Admin/AracEkle.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Admin/AracEkle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXJhY0VrbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Admin/Index.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/Araba.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/Araba.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxBcmFiYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/Kamyon.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/Kamyon.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxLYW15b24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/KiralananAraclar.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/KiralananAraclar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxLaXJhbGFuYW5BcmFjbGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/Motor.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/Motor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxNb3Rvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/Tekne.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/Tekne.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxUZWtuZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Araclar/Ticari.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Araclar/Ticari.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJhY2xhclxUaWNhcmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Giris/Index.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Giris/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lyaXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Giris/Kaydol.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Giris/Kaydol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lyaXNcS2F5ZG9sLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Giris/KullaniciGiris.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Giris/KullaniciGiris.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lyaXNcS3VsbGFuaWNpR2lyaXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Home/Index.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Home/Privacy.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Shared/Error.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/_ViewImports.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/_ViewStart.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yavuz/source/repos/WebProje/WebProje/Views/Shared/_Layout.cshtml]
+[C:/Users/yavuz/OneDrive/Masaüstü/WebProje/WebProje/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wp3nozgae1

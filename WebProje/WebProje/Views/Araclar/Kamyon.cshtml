@@ -6,12 +6,33 @@
 @model IEnumerable<WebProje.Entities.Arac>
 @section Resim{
 
-        <div id="sectionresimkamyon">
-            <div id="sectionyazi">
-                KAMYONLAR
-
+         <div id="sectionresimaraba">
+        <div id="sectionyazi" class="row">
+            <div class="col-6">
+                <div style="text-shadow: 12px 5px 6px rgb(11, 23, 51);">KAMYONLAR</div>
             </div>
+            
+
+            <div class="dropdown col-4 text-center text-black ">
+              <button id="filtre" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtrele
+              </button>
+              <ul  class="dropdown-menu">
+                    <li><div  class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Kamyon", new {  id=1 })</div></li>
+                    <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Kamyon", new {  id=2 })</div></li>
+                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Kamyon", new {  id=3 })</div></li>
+                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Kamyon", new {  id=4 })</div></li>
+              </ul>
+            </div>
+
+
+            
+           
+            
+            
+
         </div>
+    </div>
 
 
 }

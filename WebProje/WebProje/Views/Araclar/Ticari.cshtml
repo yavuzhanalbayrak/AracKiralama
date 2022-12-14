@@ -6,18 +6,40 @@
 @model IEnumerable<WebProje.Entities.Arac>
 @section Resim{
 
-        <div id="sectionresimticari">
-            <div id="sectionyazi">
-                TİCARİ ARAÇLAR
-
+    <div id="sectionresimaraba">
+        <div id="sectionyazi" class="row">
+            <div class="col-6">
+                <div style="text-shadow: 12px 5px 6px rgb(11, 23, 51);">TİCARİ ARAÇLAR</div>
             </div>
+
+
+            <div class="dropdown col-4 text-center text-black ">
+                <button id="filtre" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtrele
+                </button>
+                <ul class="dropdown-menu">
+                    <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Ticari", new {  id=1 })</div></li>
+                    <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Ticari", new {  id=2 })</div></li>
+                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Ticari", new {  id=3 })</div></li>
+                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Ticari", new {  id=4 })</div></li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
         </div>
+    </div>
 
 
 }
 
 <div id="body">
     <div class="row">
+
 
         @foreach (var item in Model)
         {
@@ -49,14 +71,13 @@
                             <div class="col-2">@Html.DisplayFor(model => item.renk)</div>
 
                         </div>
-                         <div class="row text-start text-center">
-                                <div class="col-4"></div>
-                                <div class="btn btn-success col-4 ">@Html.ActionLink("Kirala", "Detay", new {  id=item.id })</div>
-                               
-                               
-                                        
-                            </div>
+                        <div class="row text-start text-center">
+                            <div class="col-4"></div>
+                            <div class="btn btn-success col-4 ">@Html.ActionLink("Kirala", "Detay", new {  id=item.id })</div>
 
+
+
+                        </div>
                     </div>
 
 
@@ -66,8 +87,8 @@
 
 
 
+
     </div>
+
 </div>
-
-
 

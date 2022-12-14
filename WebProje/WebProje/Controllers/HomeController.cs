@@ -32,6 +32,7 @@ namespace WebProje.Controllers
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 

@@ -10,30 +10,121 @@ namespace WebProje.Controllers
     public class AraclarController : Controller
     {
         AppDbContext _context=new AppDbContext();
-        public IActionResult Araba()
-        {
-            var arac = _context.araclar.Where(x=>x.tur == "araba" && x.durum == "listede");
-            return View(arac);
-        }
-        public IActionResult Ticari()
-        {
-            var arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede");
-            return View(arac);
-        }
-        public IActionResult Kamyon()
+        public IActionResult Araba(int id)
         {
 
-            var arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede");
+            var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id) KULLANICI ADI TUTMA
+            var kul = _context.kullanici.FirstOrDefault(x => x.id == int.Parse(cookieValue));
+            ViewBag.name = kul.kullaniciAdi;
+
+            var arac = _context.araclar.Where(x => x.tur == "araba" && x.durum == "listede");
+            if (id==2) {    //FİLTRELEME İŞLEMİ
+                arac = _context.araclar.Where(x => x.tur == "araba" && x.durum == "listede").OrderByDescending(x => x.id);//İlk Yüklenen
+            }
+            else if (id==3)
+            {
+                arac = _context.araclar.Where(x => x.tur == "araba" && x.durum == "listede").OrderBy(x => x.yil);//Artan 
+            }
+            else if (id==4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "araba" && x.durum == "listede").OrderByDescending(x => x.yil);//Azalan
+            }
+            else arac = _context.araclar.Where(x => x.tur == "araba" && x.durum == "listede").OrderBy(x => x.id);//Son Yüklenen
+
+
+          
+           
             return View(arac);
         }
-        public IActionResult Motor()
+        public IActionResult Ticari(int id)
         {
+
+            var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id)
+            var kul = _context.kullanici.FirstOrDefault(x => x.id == int.Parse(cookieValue));
+            ViewBag.name = kul.kullaniciAdi;
+
+            var arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede");
+            if (id == 2)
+            {
+                arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede").OrderByDescending(x => x.id);//İlk Yüklenen
+            }
+            else if (id == 3)
+            {
+                arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede").OrderBy(x => x.yil);//Artan 
+            }
+            else if (id == 4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede").OrderByDescending(x => x.yil);//Azalan
+            }
+            else arac = _context.araclar.Where(x => x.tur == "ticari" && x.durum == "listede").OrderBy(x => x.id);//Son Yüklenen
+            
+            return View(arac);
+        }
+        public IActionResult Kamyon(int id)
+        {
+            var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id)
+            var kul = _context.kullanici.FirstOrDefault(x => x.id == int.Parse(cookieValue));
+            ViewBag.name = kul.kullaniciAdi;
+
+            var arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede");
+            if (id == 2)
+            {
+                arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede").OrderByDescending(x => x.id);//İlk Yüklenen
+            }
+            else if (id == 3)
+            {
+                arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede").OrderBy(x => x.yil);//Artan 
+            }
+            else if (id == 4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede").OrderByDescending(x => x.yil);//Azalan
+            }
+            else arac = _context.araclar.Where(x => x.tur == "kamyon" && x.durum == "listede").OrderBy(x => x.id);//Son Yüklenen
+
+            return View(arac);
+        }
+        public IActionResult Motor(int id)
+        {
+            var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id)
+            var kul = _context.kullanici.FirstOrDefault(x => x.id == int.Parse(cookieValue));
+            ViewBag.name = kul.kullaniciAdi;
+
             var arac = _context.araclar.Where(x => x.tur == "motor" && x.durum == "listede");
+            if (id == 2)
+            {
+                arac = _context.araclar.Where(x => x.tur == "motor" && x.durum == "listede").OrderByDescending(x => x.id);//İlk Yüklenen
+            }
+            else if (id == 3)
+            {
+                arac = _context.araclar.Where(x => x.tur == "motor" && x.durum == "listede").OrderBy(x => x.yil);//Artan 
+            }
+            else if (id == 4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "motor" && x.durum == "listede").OrderByDescending(x => x.yil);//Azalan
+            }
+            else arac = _context.araclar.Where(x => x.tur == "motor" && x.durum == "listede").OrderBy(x => x.id);//Son Yüklenen
             return View(arac);
         } 
-        public IActionResult Tekne()
+        public IActionResult Tekne(int id)
         {
+            var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id)
+            var kul = _context.kullanici.FirstOrDefault(x => x.id == int.Parse(cookieValue));
+            ViewBag.name = kul.kullaniciAdi;
+
             var arac = _context.araclar.Where(x => x.tur == "tekne" && x.durum == "listede");
+            if (id == 2)
+            {
+                arac = _context.araclar.Where(x => x.tur == "tekne" && x.durum == "listede").OrderByDescending(x => x.id);//İlk Yüklenen
+            }
+            else if (id == 3)
+            {
+                arac = _context.araclar.Where(x => x.tur == "tekne" && x.durum == "listede").OrderBy(x => x.yil);//Artan 
+            }
+            else if (id == 4)
+            {
+                arac = _context.araclar.Where(x => x.tur == "tekne" && x.durum == "listede").OrderByDescending(x => x.yil);//Azalan
+            }
+            else arac = _context.araclar.Where(x => x.tur == "tekne" && x.durum == "listede").OrderBy(x => x.id);//Son Yüklenen
             return View(arac);
         }
         
@@ -42,10 +133,11 @@ namespace WebProje.Controllers
 
                 int kullaniciId = int.Parse(Request.Cookies["id"]);
                 var kullanici=_context.kullanici.FirstOrDefault(x => x.id == kullaniciId); 
-               var arac=_context.araclar.FirstOrDefault(x => x.id == id);
+                var arac=_context.araclar.FirstOrDefault(x => x.id == id);
                 arac.durum = "kiralandi";
-            arac.sahibi = kullanici.kullaniciAdi;
+                arac.sahibi = kullanici.kullaniciAdi;
                 _context.araclar.Update(arac);
+                kira.id = null;
                 kira.aracAdi = arac.marka;
                 kira.aracModeli = arac.model;
                 kira.aracId = id;
