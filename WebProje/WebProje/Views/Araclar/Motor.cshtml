@@ -6,28 +6,11 @@
 @model IEnumerable<WebProje.Entities.Arac>
 @section Resim{
 
-    <div id="sectionresimaraba">
-        <div id="sectionyazi" class="row">
+    <div id="sectionresimmotor">
+        <div id="sectionyazi" class="">
             <div class="col-6">
-                <div style="text-shadow: 12px 5px 6px rgb(11, 23, 51);">MOTORLAR</div>
+                <div key="4" style="text-shadow: 12px 5px 6px rgb(11, 23, 51);">Motorlar</div>
             </div>
-
-
-            <div class="dropdown col-4 text-center text-black ">
-                <button id="filtre" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Filtrele
-                </button>
-                <ul class="dropdown-menu">
-                    <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Motor", new {  id=1 })</div></li>
-                    <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Motor", new {  id=2 })</div></li>
-                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Motor", new {  id=3 })</div></li>
-                    <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Motor", new {  id=4 })</div></li>
-                </ul>
-            </div>
-
-
-
-
 
 
 
@@ -38,6 +21,21 @@
 }
 
 <div id="body">
+
+
+    <div class="dropdown text-end text-black ">
+        <button key="18" id="filtre" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtrele
+        </button>
+        <ul class="dropdown-menu">
+            <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Motor", new {  id=1 })</div></li>
+            <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Motor", new {  id=2 })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Motor", new {  id=3 })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Motor", new {  id=4 })</div></li>
+        </ul>
+    </div>
+
+
     <div class="row">
 
 
@@ -46,34 +44,34 @@
             <div id="araclist" class="col-xl-6 col-sm-12 ">
                 <div id="arac">
                     <div>
-                        <a asp-area="" asp-route-id="@item.id" asp-controller="Araclar" asp-action="Detay"><img id="aracresmi" src="@item.aracResmi" class="" alt="..."></a>
+                        <img id="aracresmi" src="@item.aracResmi" class="" alt="...">
                         <div class="row text-start">
                             <div class="col-4"></div>
-                            <div class="col-2">@Html.DisplayNameFor(model => model.marka)</div>  :
+                            <div key="15" class="col-2">Marka</div>  :
                             <div class="col-2">@Html.DisplayFor(model => item.marka)</div>
 
                         </div>
                         <div class="row text-start">
                             <div class="col-4"></div>
-                            <div class="col-2">@Html.DisplayNameFor(model => model.model)</div>  :
+                            <div class="col-2">Model</div>  :
                             <div class="col-2">@Html.DisplayFor(model => item.model)</div>
 
                         </div>
                         <div class="row text-start">
                             <div class="col-4"></div>
-                            <div class="col-2">@Html.DisplayNameFor(model => model.yil)</div>  :
+                            <div key="16" class="col-2">Yıl</div>  :
                             <div class="col-2">@Html.DisplayFor(model => item.yil)</div>
 
                         </div>
                         <div class="row text-start">
                             <div class="col-4"></div>
-                            <div class="col-2">@Html.DisplayNameFor(model => model.renk)</div>  :
+                            <div key="17" class="col-2">Renk</div>  :
                             <div class="col-2">@Html.DisplayFor(model => item.renk)</div>
 
                         </div>
                         <div class="row text-start text-center">
                             <div class="col-4"></div>
-                            <div class="btn btn-success col-4 ">@Html.ActionLink("Kirala", "Detay", new {  id=item.id })</div>
+                            <div class="btn btn-success col-4 ">@Html.ActionLink("Rent", "Detay", new {  id=item.id })</div>
 
 
 
