@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectUniqueName": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\MovaviStudio\\WebProje\\WebProje\\WebProje.csproj",
       "projectName": "WebProje",
-      "projectPath": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+      "projectPath": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\MovaviStudio\\WebProje\\WebProje\\WebProje.csproj",
       "packagesPath": "C:\\Users\\yavuz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yavuz\\source\\repos\\WebProje\\WebProje\\obj\\",
+      "outputPath": "C:\\Users\\yavuz\\OneDrive\\Masaüstü\\MovaviStudio\\WebProje\\WebProje\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yavuz\\AppData\\Roaming\\NuGet\\NuGet.Config",
