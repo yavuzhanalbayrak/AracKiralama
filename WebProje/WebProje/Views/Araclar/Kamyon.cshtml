@@ -32,10 +32,10 @@
             Filtrele
         </button>
         <ul class="dropdown-menu">
-            <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Kamyon", new {  id=1 })</div></li>
-            <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Kamyon", new {  id=2 })</div></li>
-            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Kamyon", new {  id=3 })</div></li>
-            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Kamyon", new {  id=4 })</div></li>
+            <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Kamyon", new {  id=1,aracTur="kamyon" })</div></li>
+            <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Kamyon", new {  id=2 ,aracTur="kamyon" })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Kamyon", new {  id=3 ,aracTur="kamyon" })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Kamyon", new {  id=4 ,aracTur="kamyon" })</div></li>
         </ul>
     </div>
 

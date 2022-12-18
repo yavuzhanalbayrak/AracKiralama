@@ -28,10 +28,10 @@
             Filtrele
         </button>
         <ul class="dropdown-menu">
-            <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Motor", new {  id=1 })</div></li>
-            <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Motor", new {  id=2 })</div></li>
-            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Motor", new {  id=3 })</div></li>
-            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Motor", new {  id=4 })</div></li>
+            <li><div class="btn  col-1  ">@Html.ActionLink("İlk Yüklenen", "Motor", new {  id=1, aracTur="motor" })</div></li>
+            <li> <div class="btn  col-1 ">@Html.ActionLink("Son Yüklenen", "Motor", new {  id=2 ,aracTur="motor" })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Artan)", "Motor", new {  id=3 ,aracTur="motor" })</div></li>
+            <li><div class="btn  col-1 ">@Html.ActionLink("Yıl (Azalan)", "Motor", new {  id=4 ,aracTur="motor" })</div></li>
         </ul>
     </div>
 
