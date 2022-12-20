@@ -35,19 +35,19 @@ namespace WebProje.Controllers
             }
              else if (id == 5)
             {
-                arac = _context.araclar.Where(x => x.tur == "motor" ).OrderBy(x => x.marka);//Azalan
+                arac = _context.araclar.Where(x => x.tur == "motor" ).OrderBy(x => x.marka);//Motorlar
             }
              else if (id == 6)
             {
-                arac = _context.araclar.Where(x => x.tur == "kamyon" ).OrderBy(x => x.marka);//Azalan
+                arac = _context.araclar.Where(x => x.tur == "kamyon" ).OrderBy(x => x.marka);//Kamyonlar
             }
              else if (id == 7)
             {
-                arac = _context.araclar.Where(x => x.tur == "tekne" ).OrderBy(x => x.marka);//Azalan
+                arac = _context.araclar.Where(x => x.tur == "tekne" ).OrderBy(x => x.marka);//Tekneler
             }
               else if (id == 8)
             {
-                arac = _context.araclar.Where(x => x.tur == "ticari" ).OrderBy(x => x.marka);//Azalan
+                arac = _context.araclar.Where(x => x.tur == "ticari" ).OrderBy(x => x.marka);//Ticariler
             }
 
             else arac = _context.araclar.OrderBy(x => x.tur);//HEPSİ
@@ -56,12 +56,12 @@ namespace WebProje.Controllers
 
             return View(arac);
         } 
-        public IActionResult AracEkle()
+        public IActionResult AracEkle()     //Araç ekleme sayfası
         {
 
             return View();
         }
-        public IActionResult AracDuzenle(int? id)
+        public IActionResult AracDuzenle(int? id)   //Var olan aracı update etme
         {
             var arac = _context.araclar.FirstOrDefault(x => x.id == id);
 
@@ -80,7 +80,7 @@ namespace WebProje.Controllers
             return View(arac);
         }
         [HttpPost]
-        public IActionResult AracDuzenle(int? id, Arac arac)
+        public IActionResult AracDuzenle(int? id, Arac arac)    //Formdan alınan bilgiler eşliğinde update işlemini gerçekleştirir.
         {
             if (id != arac.id)
             {
@@ -90,7 +90,7 @@ namespace WebProje.Controllers
             if (ModelState.IsValid)
             {
 
-                arac.durum = "listede";
+                arac.durum = "listede";     
                 _context.araclar.Update(arac);
                
                 _context.SaveChanges();
@@ -101,7 +101,7 @@ namespace WebProje.Controllers
             return RedirectToAction("AracDuzenle");
         }
         [HttpPost]
-        public IActionResult AracEkle(Arac arac)
+        public IActionResult AracEkle(Arac arac)    //Araç eklemeyi gerçekleştiren action.
         {
             if (ModelState.IsValid)
             {
@@ -119,7 +119,7 @@ namespace WebProje.Controllers
 
         }
 
-        public IActionResult AracSil(int? id)
+        public IActionResult AracSil(int? id)   //Araç silme işlemleri gerçekleştirildi.
         {
             if (id is null)
             {
