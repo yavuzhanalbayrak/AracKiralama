@@ -25,7 +25,7 @@ namespace WebProje.Controllers
         { 
             var cookieValue = Request.Cookies["id"];    //Cookie Çağırma (id)
             var kul = _context.kullanici.FirstOrDefault(x=>x.id==int.Parse(cookieValue));
-            ViewBag.name = kul.kullaniciAdi;
+            ViewBag.name = kul.kullaniciAdi;    //Viewbag ile kullanıcı adı view'a gönderildi.
 
             return View();
         }

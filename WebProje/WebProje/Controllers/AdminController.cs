@@ -65,13 +65,13 @@ namespace WebProje.Controllers
         {
             var arac = _context.araclar.FirstOrDefault(x => x.id == id);
 
-            if (id is null || arac.durum=="kiralandi")
+            if (id is null || arac.durum=="kiralandi")  //Araç kiralanmışsa düzeltme yapılamaz
             {
                 TempData["msj"] = "Seçilen araç kiralanmış veya mevcut değil.";
                 return RedirectToAction("Index");
             }
          
-            if (arac is null)
+            if (arac is null)//olmayan araç düzeltilemez.
             {
                 TempData["msj"] = "Düzenlenecek herhangi bir araç yok.";
                 return RedirectToAction("Index");
