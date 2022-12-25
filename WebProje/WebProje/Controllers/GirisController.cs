@@ -41,9 +41,9 @@ namespace WebProje.Controllers
                 if (userinfo == null)
                 {
    
-                    kayit.rol = "uye";
-                    _context.kullanici.Add(kayit);
-                    _context.SaveChanges();
+                    kayit.rol = "uye";  //Kaydolan kullanıcı üyedir.
+                    _context.kullanici.Add(kayit);//kullanıcı tabloya eklendi.
+                    _context.SaveChanges();//Db'ye kaydedildi.
                     TempData["hata"] = "Kayıt başarılı";
                     return RedirectToAction("Kaydol");
                 }
@@ -74,28 +74,25 @@ namespace WebProje.Controllers
 
             if (userinfo != null)
             {
-                claims = new List<Claim>
+                //Giriş yapan kullanıcının rolü cookie olarak authorize işlemine götürülür.
+                claims = new List<Claim>    
                 {
                     new Claim(ClaimTypes.Name, userinfo.kullaniciAdi),
                     new Claim(ClaimTypes.Role,userinfo.rol)
 
 
                 };
-
-
-
-
                 var claimsIdentify = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var authProperties = new AuthenticationProperties();
-
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentify),
                     authProperties);
 
-                if (userinfo.rol == "admin")
+                if (userinfo.rol == "admin")    //Kullanıcı adminse admin paneline atılır.
                 {
                     return RedirectToAction("Index", "Admin");
 
                 }
+                //Kullanıcı üyeyse ana sayfaya yönlendirilir.
                 else
                 {
 
@@ -108,7 +105,7 @@ namespace WebProje.Controllers
                 }
 
             }
-            else
+            else//Kullanıcı adı veya şifre hatalı.
             {
                 TempData["Girishata"] = "Kullanıcı Adı veya Şifre hatalı";
                 return RedirectToAction("KullaniciGiris", "Giris");
@@ -129,6 +126,7 @@ namespace WebProje.Controllers
 
             Response.Cookies.Delete("id");   //Cookie Silme. (id)
 
+            //Cookie'deki rol silinir.
             claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, " "),
