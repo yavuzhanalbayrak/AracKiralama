@@ -40,8 +40,16 @@ namespace WebProje.Controllers
                 var userinfo = await _context.kullanici.FirstOrDefaultAsync(x => x.kullaniciAdi == kayit.kullaniciAdi);     //Kullanıcı var mı kontrol!
                 if (userinfo == null)
                 {
+
+                    if(kayit.kullaniciAdi == "g201210008@sakarya.edu.tr" || kayit.kullaniciAdi == "g201210017@sakarya.edu.tr")
+                    {
+                        kayit.rol = "admin";  //Kaydolan kullanıcı üyedir.
+                    }
+                    else
+                    {
+                        kayit.rol = "uye";  //Kaydolan kullanıcı üyedir.
+                    }
    
-                    kayit.rol = "uye";  //Kaydolan kullanıcı üyedir.
                     _context.kullanici.Add(kayit);//kullanıcı tabloya eklendi.
                     _context.SaveChanges();//Db'ye kaydedildi.
                     TempData["hata"] = "Kayıt başarılı";
